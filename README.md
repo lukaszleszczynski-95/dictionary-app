@@ -1,4 +1,4 @@
-Dictionary Search Web App
+##Dictionary Search Web App
 This is a simple web application for searching word definitions. It allows users to enter a word and retrieve its meaning and phonetics. Additionally, you can listen to the pronunciation of the word.
 
 Table of Contents

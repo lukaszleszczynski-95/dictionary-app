@@ -11,7 +11,7 @@
 
 
 body {
-    background-color: #cca8e9;
+    background-color: #35495e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .wrapper{
-    background-color:#5f5dbd;
+    background-color: #42b883;
     border-radius: 16px;;
     padding: 15px;
     margin-top: 50px;
@@ -29,18 +29,26 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    
 
 
 
 }
 
-.wrapper input {
+.search-box{
+    display: flex;
+    
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.search-box input {
     padding: 10px 25px;
     border-radius: 50px;
     border: none;
     outline: none;
     transition: 0.3s;
+
 }
 
 .wrapper input:hover,
@@ -49,55 +57,87 @@ body {
 }
 
 .submit {
-    padding:10px 25px;
+    background-color: #93e4c1;
+    padding:8px 18px;
     border: none;
     border-radius: 50px;
     font-family: 'Fira Sans', sans-serif;
     transition: 0.3s;
     cursor: pointer;
+    flex-shrink: 1;
 }
 
 .submit:hover {
-    background-color: #d3d3d394;
+    background-color: #93e4c1b7;
 }
 
-.search-box{
-    display: flex;
-    gap: 25px;
-}
+
 
 .js-display-dictionary {
+    
     padding: 15px;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
+    align-items: start;
+    font-family: 'Roboto', sans-serif;
+    transform: scaleY(0);
+    animation: display .5s ease-in ;
    
 }
 
 .js-display-dictionary > * {
+   
     margin-top: 15px;
     color: #fff;
+    
+}
+
+@keyframes display {
+    0%{
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
 }
 
 .js-play {
     padding: 10px 25px;
-    background: #83cee0; 
+    background: #347474;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     border: none;
     border-radius: 16px;
     transition: 0.3s;
     cursor: pointer;
+    display: none;
 }
 .js-play:hover {
-    background: #83cde0d7; 
+    background: #34747467;
 }
 
 
 .js-text {
     text-transform: uppercase;
 }
-.js-play  {
-    display: none;
+
+.js-definition {
+    color: #2c5d63;
+    font-weight: bold;
 }
+
+.js-example{
+
+}
+
+.js-phonetics {
+    font-size: 18px;
+}
+
+
+
 .button-container {
     display: flex;
     justify-content: end;
