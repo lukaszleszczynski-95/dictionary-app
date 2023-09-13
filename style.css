@@ -19,13 +19,19 @@ body {
     
 }
 
+.container {
+    max-width: 450px;
+    width: 100%;
+   
+}
+
 .wrapper{
     background-color: #42b883;
-    border-radius: 16px;;
+    border-radius: 16px;
+    
     padding: 15px;
     margin-top: 50px;
-    max-width: 500px;;
-    width: 95%;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,19 +78,25 @@ body {
 }
 
 
-
+/* The problem was that I was trying to scale it within a parent, the solution is to put it out of the parent .wrapper gto achieve the expected behaviour. */
 .js-display-dictionary {
-    
+    background-color: #42b883;
+    opacity: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: 1s;
     padding: 15px;
-    margin-top: 15px;
+    border-radius: 0 0 16px 16px;
     display: flex;
     flex-direction: column;
     align-items: start;
     font-family: 'Roboto', sans-serif;
-    transform: scaleY(0);
-    animation: display .5s ease-in ;
+    
+    
    
 }
+
+
 
 .js-display-dictionary > * {
    
@@ -93,14 +105,6 @@ body {
     
 }
 
-@keyframes display {
-    0%{
-        transform: scaleY(0);
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}
 
 .js-play {
     padding: 10px 25px;
@@ -128,9 +132,6 @@ body {
     font-weight: bold;
 }
 
-.js-example{
-
-}
 
 .js-phonetics {
     font-size: 18px;

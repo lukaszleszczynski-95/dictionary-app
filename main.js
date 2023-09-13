@@ -83,7 +83,8 @@ const sound = document.querySelector('#sound');
         sumbitBtn.addEventListener('click',(e) => {
             if(inputElement.value.trim() !== ''){
             searchWord();
-            document.querySelector('.js-display-dictionary').style.display = 'block';
+            displayDictionary();
+           
             } else {
                 alert('Type the word')
             }
@@ -92,5 +93,14 @@ const sound = document.querySelector('#sound');
         inputElement.addEventListener('keyup', (e) => {
             if(e.key === 'Enter'){
                 searchWord();
+                displayDictionary();
             }
         })
+
+
+        function displayDictionary() {
+            document.querySelector('.js-display-dictionary').style.opacity = '1';
+            document.querySelector('.js-display-dictionary').style.transform = 'scaleY(1)';
+            document.querySelector('.wrapper').style.borderRadius = '16px 16px 0 0';
+
+        }
